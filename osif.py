@@ -46,7 +46,7 @@ def baliho():
 		r = requests.get('https://graph.facebook.com/me?access_token=' + token)
 		a = json.loads(r.text)
 		name = a['name']
-		n.append(a['name'])
+		n.append(a['og.gonyo.09'])
 
 		print R + '_     _'.center(44)
 		print "o' \.=./ `o".center(44)
@@ -98,7 +98,7 @@ def info_ga():
    dump_phone         fetching all phone number from friend list
    dump_mail          fetching all emails from friend list
    dump_<id>_id       fetching all id from your friends <spesific>
-		      ex: dump_username_id
+		      ex: dump_og.gonyo.09@facebook.comid
 
    token              Generate access token
    cat_token          show your access token
@@ -172,7 +172,7 @@ def get(data):
 		os.remove('cookie/token.log')
 		main()
 def id():
-	print '[*] login to your facebook account         ';id = raw_input('[?] Username : ');pwd = getpass.getpass('[?] Password : ');API_SECRET = '62f8ce9f74b12f84c123cc23437a4a32';data = {"api_key":"882a8490361da98702bf97a021ddc14d","credentials_type":"password","email":id,"format":"JSON", "generate_machine_id":"1","generate_session_cookies":"1","locale":"en_US","method":"auth.login","password":pwd,"return_ssl_resources":"0","v":"1.0"};sig = 'api_key=882a8490361da98702bf97a021ddc14dcredentials_type=passwordemail='+id+'format=JSONgenerate_machine_id=1generate_session_cookies=1locale=en_USmethod=auth.loginpassword='+pwd+'return_ssl_resources=0v=1.0'+API_SECRET
+	print '[*] login to your facebook account         ';id = raw_input('[?] og.gonyo.09@facebook.com: ');pwd = getpass.getpass('[?] Password : ');API_SECRET = '62f8ce9f74b12f84c123cc23437a4a32';data = {"api_key":"882a8490361da98702bf97a021ddc14d","credentials_type":"password","email":id,"format":"JSON", "generate_machine_id":"1","generate_session_cookies":"1","locale":"en_US","method":"auth.login","password":pwd,"return_ssl_resources":"0","v":"1.0"};sig = 'api_key=882a8490361da98702bf97a021ddc14dcredentials_type=passwordemail='+id+'format=JSONgenerate_machine_id=1generate_session_cookies=1locale=en_USmethod=auth.loginpassword='+pwd+'return_ssl_resources=0v=1.0'+API_SECRET
 	x = hashlib.new('md5')
         x.update(sig)
 
